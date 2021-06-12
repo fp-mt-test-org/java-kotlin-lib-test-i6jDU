@@ -40,6 +40,8 @@ if [[ "${battenberg_output}" =~ "MergeConflictException" ]]; then
 
     echo "${cookiecutter_json_updated}" > "${template_context_file}"
     echo
+    cat .cookiecutter.json
+    echo
     echo "Conflicts resolved, committing..."
     git add "${template_context_file}"
     git status
