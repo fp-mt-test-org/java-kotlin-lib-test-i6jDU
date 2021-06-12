@@ -11,10 +11,12 @@ echo
 
 # This codeblock answers the prompts issued by battenberg below.
 {
-    # You've downloaded .../.cookiecutters/template-java-kotlin-library before.
-    # Is it okay to delete and re-download it? [yes]:
-    echo "1";
-    sleep 1;
+    if [[ -d "$HOME/.cookiecutters" ]]; then
+        # You've downloaded .../.cookiecutters/template-java-kotlin-library before.
+        # Is it okay to delete and re-download it? [yes]:
+        echo "1";
+        sleep 1;
+    fi
 
     # owner [Product Infrastructure]:
     echo "Product Infrastructure";
